@@ -23,8 +23,8 @@ export default {
     input.addEventListener('change', this.onInput)
   },
   methods: {
-  	onInput: function (e) {
-    	const input = this.$refs.input
+    onInput: function (e) {
+      const input = this.$refs.input
       const file = input.files[0]
       const preview = new Image();
       const uploadedImage = window.URL.createObjectURL(file)
@@ -39,7 +39,7 @@ export default {
 
       preview.src = uploadedImage
     },
-  	reduceImage: function (imageURL, landscape) {
+    reduceImage: function (imageURL, landscape) {
       const canvas = document.createElement('canvas')
       const ctx = canvas.getContext("2d")
       const img = new Image()
@@ -92,7 +92,7 @@ export default {
       img.src = imageURL;
     },
     exportCanvas(canvas, width, height) {
-    	var dataURL = canvas.toDataURL()
+      var dataURL = canvas.toDataURL()
       var result = this.$refs.result
 
       // result.width = width
